@@ -1,34 +1,29 @@
 package br.edu.ifsc.pousada.Pousada.entidade;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.List;
 
 public class Reserva {
-    private LocalDate dataCheckIn;
-    private LocalDate dataCheckOut;
+
+    private int id;
+    private String dataCheckIn;
+    private String dataCheckOut;
     private int numeroHospedes;
     private ArrayList<ServicoAdicional> servicosAdicionais;
 
-
-    public LocalDate getDataCheckIn() {
-        return dataCheckIn;
+    public int getId() {
+        return id;
     }
 
-    public void setDataCheckIn(LocalDate dataCheckIn) {
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setDataCheckIn(String dataCheckIn) {
         this.dataCheckIn = dataCheckIn;
     }
 
-    public LocalDate getDataCheckOut() {
-        return dataCheckOut;
-    }
-
-    public void setDataCheckOut(LocalDate dataCheckOut) {
+    public void setDataCheckOut(String dataCheckOut) {
         this.dataCheckOut = dataCheckOut;
-    }
-
-    public int getNumeroHospedes() {
-        return numeroHospedes;
     }
 
     public void setNumeroHospedes(int numeroHospedes) {
@@ -41,5 +36,16 @@ public class Reserva {
 
     public void setServicosAdicionais(ArrayList<ServicoAdicional> servicosAdicionais) {
         this.servicosAdicionais = servicosAdicionais;
+    }
+
+    @Override
+    public String toString() {
+        return "Reserva{" +
+                "id=" + id +
+                ", dataCheckIn='" + dataCheckIn + '\'' +
+                ", dataCheckOut='" + dataCheckOut + '\'' +
+                ", numeroHospedes=" + numeroHospedes +
+                ", servicosAdicionais=" + servicosAdicionais +
+                '}';
     }
 }
